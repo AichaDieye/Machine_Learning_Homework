@@ -7,12 +7,12 @@
  WORKDIR /usr/app
 
  #Copy requirements.txt inside the image
- COPY requirements.txt
+ COPY requirements.txt .
 
  #For running something inside the image
  RUN pip install -r requirements.txt
- 
- COPY app.py
+
+ COPY app.py .
 
 
  CMD ["python", "app.py"]
