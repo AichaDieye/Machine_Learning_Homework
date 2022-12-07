@@ -6,13 +6,15 @@
  #Mean I am actually in the image and I am navigate in the working directory /usr/ap
  WORKDIR /usr/app
 
+COPY requirements.txt .
+
+#For running something inside the image
+ RUN pip install -r requirements.txt
+
  #That means copy all the things in my actual directory inside my image
  COPY . .
-
- #For running something inside the image
- RUN pip install -r requirements.txt
 
 #Open the serveur you use
 EXPOSE 5000
 
-CMD ["python", "app.py"]
+CMD flask run --host=217.0.0.1 --port=5000
