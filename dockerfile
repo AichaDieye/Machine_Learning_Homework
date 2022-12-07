@@ -17,4 +17,4 @@ COPY requirements.txt .
 #Open the serveur you use
 EXPOSE 5000
 
-CMD flask run --host=217.0.0.1 --port=5000
+CMD flask run --host=127.0.0.1 --port=5000
