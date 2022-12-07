@@ -6,13 +6,13 @@
  #Mean I am actually in the image and I am navigate in the working directory /usr/ap
  WORKDIR /usr/app
 
- #Copy requirements.txt inside the image
- COPY requirements.txt .
+ #That means copy all the things in my actual directory inside my image
+ COPY . .
 
  #For running something inside the image
  RUN pip install -r requirements.txt
 
- COPY app.py .
+#Open the serveur you use
+EXPOSE 5000
 
-
- CMD ["python", "app.py"]
+CMD ["python", "app.py"]
